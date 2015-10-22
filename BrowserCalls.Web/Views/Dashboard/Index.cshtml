@@ -1,0 +1,47 @@
+﻿@model List<Twilio.Call>
+<h2>Answer calls</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary client-controls">
+            <div class="panel-heading">
+                <h3 class="panel-title">Answer or hang up</h3>
+            </div>
+            <div class="panel-body">
+                <p><strong>Status</strong></p>
+                <div class="well well-sm" id="call-status">
+                    Connecting to Twilio...
+                </div>
+                <button class="btn btn-lg btn-success answer-button" disabled>Answer call</button>
+                <button class="btn btn-lg btn-danger hangup-button" disabled onclick="hangUp()">Hang up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped table-bordered table-condensed">
+            <thead>
+                <tr class="primary">
+                    <th>Time</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var call in Model)
+            {
+                    <tr>
+                        <td>@call.StartTime</td>
+                        <td>@call.From</td>
+                        <td>@call.To</td>
+                        <td>@call.Duration</td>
+                        <td>@call.Price</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
