@@ -6,6 +6,9 @@ using Twilio.TwiML.Mvc;
 
 namespace BrowserCalls.Web.Controllers
 {
+    /// <summary>
+    /// Dashboard view has the functionality to answer twilio calls and initiate a video call the user in Homepage
+    /// </summary>
     public class DashboardController : TwilioController
     {
         private readonly ICredentials _credentials;

@@ -1,4 +1,7 @@
-#Innofactor Twilio POC
+#Twilio-QuickBlox POC
+
+The purpose of this demo application is to create a proof of concept working with Twilio and Quickblox. 
+This app is mostly copy and paste from both Twilio's and Quickblox's sample apps.
 
 1. Open `BrowserCalls.Web/Web.config` and update the following keys:
    ```
@@ -10,9 +13,9 @@
      <add key="TwilioPhoneNumber" value="TWILIO_PHONE_NUMBER" />
    </appSettings>
    ```
+   
+2. Edit Quickblox configuration in demo-qbconfig.js
 
-2. Build the solution.
+3. Build the solution.
 
-3. Run the application.
-
-That's it!
+4. Run the application!

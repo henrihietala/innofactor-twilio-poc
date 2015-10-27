@@ -23,11 +23,15 @@ namespace BrowserCalls.Web
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/browser-calls").Include(
-                      "~/Scripts/browser-calls.js"));
+                      "~/Scripts/demo-twilio.js",
+                      "~/Scripts/quickblox.js",
+                      "~/Scripts/demo-qbconfig.js",
+                      "~/Scripts/demo-qb.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/styles.css"));
+                      "~/Content/styles.css",
+                      "~/Content/quickblox.css"));
         }
     }
 }

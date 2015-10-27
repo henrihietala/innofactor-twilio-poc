@@ -1,0 +1,123 @@
+﻿@{
+    string caller = this.ViewData.ContainsKey("caller") ? this.ViewData["caller"].ToString() : string.Empty;
+}
+<h2>Video chat (@caller)</h2>
+<div class="wrapper webrtcp2p">
+
+    <section class="">
+        <p id="infoMessage" class="alert alert-info">
+            
+        </p>
+    </section>
+
+    <section class="choose-user center">
+        <h3 class="light text-center">Choose a user to login with.</h3>
+        <div class="users-wrap caller">
+            <!-- Append users here -->
+        </div>
+    </section>
+
+    <section class="connecting center hidden">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </section>
+
+    <section class="chat center hidden">
+        <section class="choose-recipient center">
+            <h3 class="light text-center">Choose a user to call</h3>
+            <div class="users-wrap recipient">
+                <!-- Append users here -->
+            </div>
+        </section>
+        <div class="streams">
+            <div class="localControls">
+                <span id="callerName"></span><br>
+                <video id="localVideo"></video>
+                @*<div class="mediacall-controls l-flexbox l-flexbox_flexcenter">
+                    <button class="btn_mediacall btn_camera_off" data-action="mute" disabled><img class="btn-icon_mediacall" src="~/Content/images/icon-camera-off.png" alt="camera"></button>
+                    <button class="btn_mediacall btn_mic_off" data-action="mute" disabled><img class="btn-icon_mediacall" src="~/Content/images/icon-mic-off.png" alt="mic"></button>
+                </div>*@
+            </div>
+            <div class="remoteControls">
+                <span id="calleeName"></span><br>
+                <video id="remoteVideo"></video>
+            </div>
+        </div>
+        <div class="controls">
+            @*<button id="audiocall" type="button" class="btn btn-default">
+                    <img class="icon-audiocall" src="~/Content/images/icon-audiocall.png" alt="QuickBlox Samples">Audio call
+                </button>*@
+            <button id="videocall" type="button" class="btn btn-default">
+                <img class="icon-videocall" src="~/Content/images/icon-videocall.png" alt="QuickBlox Samples">Video call
+            </button>
+            <button id="hangup" type="button" class="btn btn-default" disabled>
+                <img class="icon-hangup" src="~/Content/images/icon-hangup.png" alt="QuickBlox Samples">Hangup
+            </button>
+        </div>
+    </section>
+
+    <div class="push"></div>
+
+</div>
+
+<section id="incomingCall" class="incoming modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="info-notice"><span class="incoming-callType"></span> Call from <span class="caller"></span></span>
+            </div>
+            <div class="modal-body">
+                <div class="incoming-call-controls l-flexbox l-flexbox_flexcenter">
+                    <button id="reject" class="btn btn-default btn_decline">Decline</button>
+                    <button id="accept" class="btn btn-default btn_accept">Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<audio id="callingSignal" loop>
+    <source src="~/Content/audio/calling.ogg"></source>
+    <source src="~/Content/audio/calling.mp3"></source>
+</audio>
+
+<audio id="ringtoneSignal" loop>
+    <source src="~/Content/audio/ringtone.ogg"></source>
+    <source src="~/Content/audio/ringtone.mp3"></source>
+</audio>
+
+<audio id="endCallSignal">
+    <source src="~/Content/audio/end_of_call.ogg"></source>
+    <source src="~/Content/audio/end_of_call.mp3"></source>
+</audio>
+
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() {
+            $("[data-name='@caller']").click();
+        }, 300);
+
+    });
+    @*$(document).on('click', '.choose-user button', function () {
+        var caller;
+        if ("@caller" === "Kuuro") {
+            caller = {
+                id: 2436254,
+                login: 'webrtc_user2',
+                password: 'x6Bt0VDy5',
+                full_name: 'Kuuro'
+            };
+        } else {
+            caller = {
+                id: 2436251,
+                login: 'webrtc_user1',
+                password: 'x6Bt0VDy5',
+                full_name: 'Tulkki'
+            };
+        }
+        chooseRecipient(caller.id);
+    });*@
+</script>

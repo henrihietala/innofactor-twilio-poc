@@ -168,17 +168,34 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\audio\busy.mp3" />
+    <Content Include="Content\audio\calling.mp3" />
+    <Content Include="Content\audio\end_of_call.mp3" />
+    <Content Include="Content\audio\new_message.mp3" />
+    <Content Include="Content\audio\ringtone.mp3" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\icon-audiocall.png" />
+    <Content Include="Content\images\icon-camera-off.png" />
+    <Content Include="Content\images\icon-hangup.png" />
+    <Content Include="Content\images\icon-mic-off.png" />
+    <Content Include="Content\images\icon-videocall.png" />
+    <Content Include="Content\images\logo-quickblox.png" />
+    <Content Include="Content\quickblox.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\audio\calling.ogg" />
+    <Content Include="Content\audio\end_of_call.ogg" />
+    <Content Include="Content\audio\new_message.ogg" />
+    <Content Include="Content\audio\ringtone.ogg" />
     <None Include="Properties\PublishProfiles\innofactor-twilio-poc.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\browser-calls.js" />
+    <Content Include="Scripts\demo-twilio.js" />
+    <Content Include="Scripts\demo-qbconfig.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -186,7 +203,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\demo-qb.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\quickblox.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -198,6 +217,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Web.config" />
+    <Content Include="Views\Shared\_VideoChat.cshtml" />
+    <Content Include="Views\Home\Caller.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
